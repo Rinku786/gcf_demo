@@ -1,0 +1,12 @@
+# This is script for https://cloud.google.com/cloud-build/
+steps:
+# Install
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+# Build
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+# Deploy
+# Step 2: FRONTEND Deploy cloud app frontend
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy", "-v", "0-1-2", "app.yaml"]
