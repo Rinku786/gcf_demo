@@ -8,7 +8,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GCR_DEMO_PROJECT }}
   RUN_REGION: asia-south2
-  SERVICE_NAME: gcf_demo
+  SERVICE_NAME: gcf-demo
 
 jobs:
   build:
